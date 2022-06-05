@@ -1,0 +1,1356 @@
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        text-decoration: none;
+                    }
+                    
+                    html {
+                        scroll-behavior: smooth;
+                    }
+                    /* custom scroll bar */
+                    
+                     ::-webkit-scrollbar {
+                        width: 20px;
+                    }
+                    
+                     ::-webkit-scrollbar-track {
+                        background: #f1f1f1;
+                    }
+                    
+                     ::-webkit-scrollbar-thumb {
+                        background: #888;
+                    }
+                    
+                     ::-webkit-scrollbar-thumb:hover {
+                        background: #555;
+                    }
+                    
+                    .max-width {
+                        max-width: 1300px;
+                        padding: 0 80px;
+                        margin: auto;
+                    }
+                    
+                    .about,
+                    .services,
+                    .skills,
+                    .teams,
+                    .project,
+                    .contact footer {
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .about .about-content,
+                    .services .serv-content,
+                    .skills .skills-content,
+                    .contact .contact-content,
+                    .project .project-content {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    
+                    section .title {
+                        position: relative;
+                        text-align: center;
+                        font-size: 40px;
+                        font-weight: 500;
+                        margin-bottom: 60px;
+                        padding-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    section .title::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0px;
+                        left: 50%;
+                        width: 180px;
+                        height: 3px;
+                        background: #111;
+                        transform: translateX(-50%);
+                    }
+                    
+                    section .title::after {
+                        position: absolute;
+                        bottom: -8px;
+                        left: 50%;
+                        font-size: 20px;
+                        color:#14A76C;
+                        padding: 0 5px;
+                        background: #fff;
+                        transform: translateX(-50%);
+                    }
+                    /* navbar styling */
+                    
+                    .navbar {
+                        background: #272727;
+                        width: 100%;
+                        position: fixed;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .navbar.sticky {
+                        padding: 15px 0;
+                        background: #14A76C;
+                    }
+                    
+                    .navbar .max-width {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .navbar .newportf{
+                        margin-top: 10px;
+                        color:#14A76C;
+                        font-size: 50px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    .navbar .newportf span{
+                        color:white;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+
+                    }
+                    
+                    .navbar .logo-image {
+                        color: white;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    
+                    .navbar .logo-image .img-fluid {
+                        height: 50px;
+                    }
+                    .navbarScroll.navbarDark {
+                        background-color: black;
+                    }
+                    
+                    .navbar .menu li {
+                        list-style: none;
+                        display: inline-block;
+                    }
+                    
+                    .navbar .menu li a {
+                        display: block;
+                        color: #14A76C;
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-left: 25px;
+                        transition: color 0.3 ease;
+                    }
+                    
+                    .navbar .menu li a:hover {
+                        color: #FFE400;
+                    }
+                    
+                    .navbar.sticky .menu li a:hover {
+                        color: #FFE400;
+                    }
+                    /* menu btn styling */
+                    
+                    .menu-btn {
+                        color: #fff;
+                        font-size: 23px;
+                        cursor: pointer;
+                        display: none;
+                    }
+                    
+                    .scroll-up-btn {
+                        position: fixed;
+                        height: 45px;
+                        width: 42px;
+                        background:#14A76C;
+                        right: 30px;
+                        bottom: 10px;
+                        text-align: center;
+                        line-height: 45px;
+                        color: #fff;
+                        z-index: 9999;
+                        font-size: 30px;
+                        border-radius: 6px;
+                        border-bottom-width: 2px;
+                        cursor: pointer;
+                        opacity: 0;
+                        pointer-events: none;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .scroll-up-btn.show {
+                        bottom: 30px;
+                        opacity: 1;
+                        pointer-events: auto;
+                    }
+                    
+                    .scroll-up-btn:hover {
+                        filter: brightness(90%);
+                    }
+                    /*home section styling*/
+                    
+                    .home {
+                        display: flex;
+                        min-height: 745px;
+                        background-size: cover;
+                        background-attachment: fixed;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        background: #272727;
+                    }
+                    
+                    .home .leo {
+                        display: block;
+                        position: absolute;
+                        right: 70px;
+                        bottom: 70px;
+                        height: 200px;
+                    }
+                    
+                    .home .max-width {
+                        margin: auto 0 auto 40px;
+                    }
+                    
+                    .home .max-width .row {
+                        margin-right: 0;
+                    }
+                    
+                    .home .home-content .text-1 {
+                        color: #202121;
+                        font-size: 60px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        font-weight: 300;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .home .home-content .text-2 {
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        color: #202121;
+                        font-size: 60px;
+                        font-weight: 300;
+                        margin-left: -3px;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        letter-spacing: 2.7px;
+                    }
+                    
+                    .home .home-content .text-2 span {
+                        color: #202121;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                    }
+                    
+                    .home .home-content .text-3 {
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        color: #202121;
+                        font-size: 60px;
+                        margin: 5px 0;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                    }
+                    
+                    .home .home-content .text-3 span {
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        color: #202121;
+                        font-size: 60px;
+                        font-weight: 500px;
+                        margin: 5px 0;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2.7px;
+                    }
+                    
+                    .fa {
+                        padding: 10px;
+                        font-size: 30px;
+                        width: 50px;
+                        text-align: center;
+                        text-decoration: none;
+                    }
+                    /* Add a hover effect if you want */
+                    
+                    .fa:hover {
+                        opacity: 0.7;
+                    }
+                    /* Set a specific color for each brand */
+                    
+                    .fa-twitter {
+                        background: #55ACEE;
+                        color: white;
+                    }
+                    
+                    .fa-linkedin {
+                        background: #007bb5;
+                        color: white;
+                    }
+                    
+                    .fa-github {
+                        background: green;
+                        color: #fff;
+                    }
+                    
+                    .home .home-content a:hover {
+                        color: #CC00FF;
+                        background: none;
+                    }
+                    
+                    .typing1::before {
+                        content: "Web Developer";
+                        animation: animate infinite 5s;
+                        padding-left: 10px;
+                        font-weight: 500px;
+                    }
+                    
+                    @keyframes animate {
+                        0% {
+                            content: "Student";
+                        }
+                        50% {
+                            content: "Competitive Programmer";
+                        }
+                        75% {
+                            content: "Web Designer";
+                        }
+                    }
+                    /*about section*/
+                    
+                    .about {
+                        min-height: 660px;
+                        background-color: #272727;
+                    }
+                    
+                    .about .title::after {
+                        content: "Who I am";
+                        background: #212121;
+                        font-size: 25px;
+                        color: #212121;
+                        -webkit-text-stroke-width: 0.7px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .about .title {
+                        color: #212121;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        font-size: 50px;
+                    }
+                    
+                    .about .title span {
+                        color: #212121;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                    }
+                    
+                    .about .max-width {
+                        margin: auto 0 auto 70px;
+                    }
+                    
+                    .about .about-content .left {
+                        width: 40%;
+                    }
+                    
+                    .about .about-content .left img {
+                        height: 350px;
+                        width: 350px;
+                        object-fit: cover;
+                        border-radius: 6px;
+                        margin: auto auto auto 2px;
+                        border-radius: 50%;
+                        border: 5px solid #fff;
+                        
+                    }
+                    
+                    .about .about-content .right {
+                        width: 55%;
+                    }
+                    
+                    .about .about-content .right .text {
+                        font-size: 40px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                    }
+                    
+                    .about .text {
+                        color: #14A76C;
+                        font-size: 30px;
+                    }
+                    
+                    .about .about-content .right .text span {
+                        color: black;
+                    }
+                    
+                    .about .about-content .right p {
+                        text-align: justify;
+                        color: #fff;
+                        font-size: 25px;
+                    }
+                    
+                    .about .about-content .right a {
+                        display: inline-block;
+                        background: #14A76C;
+                        color: #fff;
+                        font-size: 20px;
+                        font-weight: 500;
+                        padding: 10px 30px;
+                        margin-top: 20px;
+                        border-radius: 6px;
+                    border: 2px #FFE400;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .about .about-content .right a:hover {
+                        color: #FFF;
+                        background: none;
+                    }
+                    
+                    .about .btn1 {
+                        background-color: #14A76C;
+                        width: 100px;
+                        height: 50px;
+                        margin-top: 20px;
+                        border-color: #FFE400;
+                        color: #fff;
+                    }
+                    
+                    .about .btn1:hover {
+                        background-color: #FFE400;
+                    }
+                    /*services section */
+                    
+                    .services,
+                    .teams {
+                        color: #fff;
+                        background: #272727;
+                        height: 750px;
+                    }
+                    
+                    .services .title::before,
+                    .teams .title::before {
+                        background: #fff;
+                    }
+                    
+                    .services .title::after,
+                    .teams .title::after {
+                    
+                        content: "Past year Achievements";
+                        background: #212121;
+                        font-size: 25px;
+                        color: #212121;
+                        -webkit-text-stroke-width: 0.7px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2px;
+                    }
+                  .services .title{
+                    color: #212121;
+                    font-family: 'Yanone Kaffeesatz', sans-serif;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: #14A76C;
+                    font-size: 50px;
+                  }
+
+                  .services .title span {
+                    color: #212121;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: #FFE400;
+                }
+                    .services .serv-content .card {
+                        width: calc(33% - 20px);
+                        background: #111;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 50px 25px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        height: 400px;
+                        font-size:25px;
+                        color:#fff;
+                        margin-left:10px;
+                        
+                    }
+                    
+                    .services .serv-content .card:hover {
+                        background: #212121;
+                    }
+                    
+                    .services .serv-content .card .box {
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .services .serv-content .card:hover .box {
+                        transform: scale(1.05);
+                    }
+                    
+                    .services .serv-content .card i {
+                        font-size: 40px;
+                        color: #14A76C;
+                        transition: color 0.3s ease;
+                    }
+                    
+                    .services .serv-content .card:hover i {
+                        color: #fff;
+                    }
+                    
+                    .services .serv-content .card .text {
+                        font-size: 45px;
+                        font-weight: 500;
+                        margin: 10px 0 7px 0;
+                        color:#14A76C;
+                    }
+                    /*skills styling */
+                    
+                    .skills {
+                        color: #fff;
+                        background: #272727;
+                        height: 750px;
+                    }
+                    
+                    .skills .title::after {
+                        content: "What I know";
+                    }
+                    
+                    .skills .max-width {
+                        margin: auto 0 auto 70px;
+                    }
+                    .skills .title::after {
+                        content: "Check out";
+                        background: #212121;
+                        font-size: 25px;
+                        color: #212121;
+                        -webkit-text-stroke-width: 0.7px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .skills .title {
+                        color: #212121;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        font-size: 50px;
+                    }
+                    
+                    .skills .title span {
+                        color: #212121;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                    }
+                    
+                    .skills .skills-content .column {
+                        width: calc(50% - 30px);
+                    }
+                    
+                    .skills .skills-content .left .text {
+                        font-size: 25px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                    }
+                    
+                    .skills .skills-content .left p {
+                        text-align: justify;
+                        color: #14A76C;
+                        font-size: 25px;
+                    }
+                    
+                    .skills .skills-content .left a {
+                        text-align: justify;
+                        display: inline-block;
+                        background: #14A76C;
+                        color: #fff;
+                        font-size: 18px;
+                        font-weight: 500;
+                        padding: 8px 16px;
+                        margin-top: 30px;
+                        border-radius: 6px;
+                        border: 2px solid black;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .skills .skills-content .left a:hover {
+                        color: #FFE400;
+                        background: none;
+                    }
+                    
+                    .skills .skills-content .right .bars {
+                        margin-bottom: 15px;
+                    }
+                    
+                    .skills .skills-content .right .info {
+                        display: flex;
+                        margin-bottom: 5px;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    
+                    .skills .skills-content .right span {
+                        font-weight: 500;
+                        font-size: 18px;
+                        color: #14A76C;
+                    }
+                    
+                    .skills .skills-content .right .line {
+                        height: 5px;
+                        width: 100%;
+                        background: lightgrey;
+                        position: relative;
+                    }
+                    
+                    .skills .skills-content .right .line::before {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        left: 0;
+                        top: 0;
+                        background: #FFE400;
+                    }
+                    
+                    .skills-content .right .html::before {
+                        width: 90%;
+                    }
+                    
+                    .skills-content .right .css::before {
+                        width: 80%;
+                    }
+                    
+                    .skills-content .right .javascript::before {
+                        width: 60%;
+                    }
+                    
+                    .skills-content .right .CP::before {
+                        width: 60%;
+                    }
+                    
+                    .skills-content .right .C::before {
+                        width: 90%;
+                    }
+                    .skills-content .right .java::before {
+                        width: 90%;
+                    }
+                    .skills-content .right .reactjs::before {
+                        width: 90%;
+                    }
+                    /* project section styling */
+                    
+                    .project {
+                        background: #272727;
+                        color: #fff;
+                        min-height: 800px;
+                    }
+                    
+                    .project .max-width {
+                        margin: auto 0 auto 70px;
+                    }
+                    
+                    .project .title {
+                        text-align: center;
+                    }
+                    
+                    
+                    
+                    .project .title::after {
+                        content: "Check out";
+                        background: #212121;
+                        font-size: 25px;
+                        color: #212121;
+                        -webkit-text-stroke-width: 0.7px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .project .title {
+                        color: #212121;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        font-size: 50px;
+                    }
+                    
+                    .project .title span {
+                        color: #212121;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                    }
+                    
+                    .project .project-1 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightpink;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .project .project-2 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightslategray;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .project .project-3 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightskyblue;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .project .project-4 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightgreen;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .project .project-5 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightcoral;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .project .project-6 {
+                        font-weight: 300px;
+                        font-size: 30px;
+                        color: lightseagreen;
+                        padding: 20px;
+                        margin-bottom: 20px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    p {
+                        font-size: 20px;
+                    }
+                    
+                    .project .project-content .card {
+                        width: calc(33% - 20px);
+                        background: #222;
+                        text-align: center;
+                        border-radius: 6px;
+                        padding: 20px 25px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        font-size: 20px;
+                    }
+                    
+                    .project .project-content .card .box {
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .project .project-content .card:hover .box {
+                        background: #111;
+                    }
+                    
+                    .project .project-content .card:hover .box {
+                        transform: scale(1.05s);
+                    }
+                    
+                    .project .project-content .card i {
+                        font-size: 50px;
+                        color: #14A76C;
+                        transition: color 0.3s ease;
+                    }
+                    
+                    .project .project-content .card:hover i {
+                        background: #fff;
+                    }
+                    
+                    .project .project-content .card .text {
+                        color:#14A76C;
+                        font-size: 25px;
+                        font-weight: 500;
+                        margin: 10px 0 7px 0;
+                    }
+                    /*contact section styling */
+                    
+                    .contact {
+                        background: #272727;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        color: #fff;
+                        font-size: 20px;
+                        height: 500px;
+                    }
+                    
+                    .contact .title {
+                        text-align: center;
+                    }
+                    
+                   
+                    .contact .title::after {
+                        content: "Where to contact";
+                        background: #212121;
+                        font-size: 25px;
+                        color: #212121;
+                        -webkit-text-stroke-width: 0.7px;
+                        -webkit-text-stroke-color: #FFE400;
+                        letter-spacing: 2px;
+                    }
+                    
+                    .contact .title {
+                        color: #212121;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #14A76C;
+                        font-size: 50px;
+                    }
+                    
+                    .contact .title span {
+                        color: #212121;
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: #FFE400;
+                    }
+                    
+                    
+                    .contact .contact-content .column {
+                        width: calc(50% - 30px);
+                    }
+                    
+                    .contact .contact-content .text {
+                        font-size: 20px;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                        color: #fff;
+                    }
+                    
+                    .contact .contact-content .left p {
+                        text-align: justify;
+                        color: #fff
+                    }
+                    
+                    .contact .contact-content .left .icons {
+                        margin: 10px 0;
+                    }
+                    
+                    .contact .contact-content .row {
+                        display: flex;
+                        height: 65px;
+                        align-items: center;
+                        color: #fff
+                    }
+                    
+                    .contact .contact-content .row .info {
+                        margin-left: 30px;
+                        color: #fff
+                    }
+                    
+                    .contact .contact-content .row i {
+                        font-size: 25px;
+                        color: #14A76C;
+                    }
+                    
+                    .contact .contact-content .info .head {
+                        font-weight: 500;
+                    }
+                    
+                    .contact .contact-content .info .sub-title {
+                        color: #14A76C;
+                    }
+                    
+                    .contact .right form .fields {
+                        display: flex;
+                    }
+                    
+                    .contact .right form .field,
+                    .contact .right form .fields .field {
+                        height: 45px;
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+                    
+                    .contact .right form .textarea {
+                        height: 80px;
+                        width: 100%;
+                    }
+                    
+                    .contact .right form .name {
+                        margin-right: 10px;
+                    }
+                    
+                    .contact .right form .field input,
+                    .contact .right form .textarea textarea {
+                        height: 100%;
+                        width: 100%;
+                        border: 1px solid black;
+                        border-radius: 6px;
+                        outline: none;
+                        padding: 0 15px;
+                        font-size: 17px;
+                        transition: all 0.3s ease;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        background-color: #fff;
+                    }
+                    
+                    .contact .right form .field input:focus,
+                    .contact .right form .textarea textarea:focus {
+                        border-color: #b3b3b3;
+                    }
+                    
+                    .contact .right form .textarea textarea {
+                        padding-top: 10px;
+                        resize: none;
+                    }
+                    
+                    .contact .right form .button-area {
+                        display: flex;
+                        align-items: center;
+                    }
+                    
+                    .right form .button-area button {
+                        color: #fff;
+                        display: block;
+                        width: 160px!important;
+                        height: 45px;
+                        outline: none;
+                        font-size: 20px;
+                        font-weight: 500;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        flex-wrap: nowrap;
+                        background: #14A76C;
+                        border: 2px solid black;
+                        transition: all 0.3s ease;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    .right form .button-area button:hover {
+                        color: #14A76C;
+                        background: none;
+                    }
+                    /*rating */
+                    .container{
+                        position: relative;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        background: #272727;
+                        padding: 20px 30px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                      }
+                      .container .post{
+                        display: none;
+                      }
+                      .container .text{
+                        font-size: 25px;
+                        color: #14A76C;
+                        font-weight: 500;
+                      }
+                      .container .edit{
+                        position: absolute;
+                        right: 10px;
+                        top: 5px;
+                        font-size: 16px;
+                        color: #14A76C;
+                        font-weight: 500;
+                        cursor: pointer;
+                      }
+                      .container .edit:hover{
+                        text-decoration: underline;
+                      }
+                      .container .star-widget input{
+                        display: none;
+                      }
+                      .star-widget label{
+                        font-size: 40px;
+                        color: #444;
+                        padding: 10px;
+                        float: right;
+                        transition: all 0.2s ease;
+                      }
+                      input:not(:checked) ~ label:hover,
+                      input:not(:checked) ~ label:hover ~ label{
+                        color: #14A76C;
+                      }
+                      input:checked ~ label{
+                        color: #14A76C;
+                      }
+                      input#rate-5:checked ~ label{
+                        color: #14A76C;
+                        text-shadow: 0 0 20px #14A76C;
+                      }
+                      #rate-1:checked ~ form header:before{
+                        content: "I hate it ";
+                      }
+                      #rate-2:checked ~ form header:before{
+                        content: "I do not like it ";
+                      }
+                      #rate-3:checked ~ form header:before{
+                        content: "I just like it ";
+                      }
+                      #rate-4:checked ~ form header:before{
+                        content: "It was awesome ";
+                      }
+                      #rate-5:checked ~ form header:before{
+                        content: "I just loved it";
+                      }
+                      .container form{
+                        display: none;
+                      }
+                      input:checked ~ form{
+                        display: block;
+                      }
+                      form header{
+                        width: 100%;
+                        font-size: 25px;
+                        color: #14A76C;
+                        font-weight: 500;
+                        margin: 5px 0 20px 0;
+                        text-align: center;
+                        transition: all 0.2s ease;
+                      }
+                      form .textarea{
+                        height: 100px;
+                        width: 100%;
+                        overflow: hidden;
+                      }
+                      form .textarea textarea{
+                        height: 100%;
+                        width: 100%;
+                        outline: none;
+                        color: #eee;
+                        border: 1px solid #272727;
+                        background: #272727;
+                        padding: 10px;
+                        font-size: 17px;
+                        resize: none;
+                      }
+                      .textarea textarea:focus{
+                        border-color: #272727;
+                      }
+                      form .btn{
+                        height: 45px;
+                        width: 100%;
+                        margin: 15px 0;
+                      }
+                      form .btn button{
+                        height: 100%;
+                        width: 100%;
+                        border: 1px solid #272727;
+                        outline: none;
+                        background: #222;
+                        color: #999;
+                        font-size: 17px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                      }
+                      form .btn button:hover{
+                        background: #272727;
+                      }
+                      
+
+                    /*website count */
+                    
+                    .counting{
+                        background-color: #272727;
+                    }
+
+                  .newji{
+                      margin-left: 700px;
+                      color:#14A76C;
+                      font-size: 30px;
+                      font-weight: bold;
+                      font-family: 'Yanone Kaffeesatz', sans-serif;
+                      
+                      
+                  }
+
+                    .website-counter {
+                        background-color:#272727;
+                        height: 50px;
+                        width: 100px;
+                        font-weight: 700;
+                        font-size: 25px;
+                        margin-top: 10px;
+                        color: #fff;
+                        padding-left:30px;
+                        margin-left: 720px;
+                        
+                      }
+                     
+                    
+                    .website-counter .max-width {
+                        margin: auto 0 auto 70px;
+                        
+                    }
+                      
+                      /* Styles for reset button */
+                      #reset {
+                        margin-top: 20px;
+                        background-color: #272727;
+                        cursor: pointer;
+                        font-size: 18px;
+                        padding: 20px 20px;
+                        color: #202121;
+                        border: 0;
+                      }
+                    /* footer section styling */
+                    
+                    footer {
+                        background: #272727;
+                        padding: 15px 23px;
+                        color: #fff;
+                        text-align: center;
+                        font-size: 25px;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                    }
+                    
+                    footer span a {
+                        color: #14A76C;
+                        text-decoration: none;
+                    }
+                    
+                    footer span a:hover {
+                        text-decoration: underline;
+                    }
+                    /* responsive media query start */
+                    
+                    @media (max-width: 1104px) {
+                        .about .about-content .left img {
+                            height: 350px;
+                            width: 350px;
+                        }
+                    }
+                    
+                    @media (max-width: 991px) {
+                        .max-width {
+                            padding: 0 50px;
+                        }
+                    }
+                    
+                    @media (max-width: 947px) {
+                        .menu-btn {
+                            display: block;
+                            z-index: 999;
+                        }
+                        .menu-btn i.active:before {
+                            content: "\f00d";
+                        }
+                        .navbar .menu {
+                            position: fixed;
+                            height: 100vh;
+                            width: 100%;
+                            left: -100%;
+                            top: 0;
+                            background: #111;
+                            text-align: center;
+                            padding-top: 80px;
+                            transition: all 0.3s ease;
+                        }
+                        .navbar .menu.active {
+                            left: 0;
+                        }
+                        .navbar .menu li {
+                            display: block;
+                        }
+                        .navbar .menu li a {
+                            display: inline-block;
+                            margin: 20px 0;
+                            font-size: 25px;
+                        }
+                        .home .home-content .text-2 {
+                            font-size: 70px;
+                        }
+                        .home .home-content .text-3 {
+                            font-size: 35px;
+                        }
+                        .home .home-content a {
+                            font-size: 23px;
+                            padding: 10px 30px;
+                        }
+                        .home .leo {
+                            display: block;
+                            position: absolute;
+                            right: 30px;
+                            bottom: 30px;
+                            height: 120px;
+                        }
+                        
+                        .max-width {
+                            max-width: 930px;
+                        }
+                        .about .about-content .column {
+                            width: 100%;
+                        }
+                        .about .about-content .left {
+                            display: flex;
+                            justify-content: center;
+                            margin: 0 auto 60px;
+                        }
+                        .about .about-content .right {
+                            flex: 100%;
+                        }
+                        .about .about-content .left img {
+                            height: 170px;
+                            width: 170px;
+                            object-fit: cover;
+                            border-radius: 3px;
+                            margin: auto auto auto 2px;
+                            border-radius: 50%;
+                            border: 5px solid #fff;
+                            
+                        }
+                        .services .serv-content .card {
+                            width: calc(33% - 20px);
+                            background: #111;
+                            text-align: center;
+                            border-radius: 6px;
+                            padding: 20px 10px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            height: 150px;
+                            font-size:15px;
+                            color:#fff;
+                            margin-left:10px;
+                            
+                        }
+                        .skills .skills-content .left .text {
+                            font-size: 25px;
+                            font-weight: 600;
+                            margin-bottom: 15px;
+                        }
+                        
+                        .skills .skills-content .left p {
+                            text-align: justify;
+                            color: #14A76C;
+                            font-size: 15px;
+                        }
+                        
+                        .skills .skills-content .left a {
+                            text-align: justify;
+                            display: inline-block;
+                            background: #14A76C;
+                            color: #fff;
+                            font-size: 18px;
+                            font-weight: 500;
+                            padding: 8px 16px;
+                            margin-top: 30px;
+                            border-radius: 6px;
+                            border: 2px solid black;
+                            transition: all 0.3s ease;
+                        }
+                        
+                        .skills .skills-content .left a:hover {
+                            color: #FFE400;
+                            background: none;
+                        }
+                        
+                        .skills .skills-content .right .bars {
+                            margin-bottom: 15px;
+                        }
+                        
+                        .skills .skills-content .right .info {
+                            display: flex;
+                            margin-bottom: 5px;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                        
+                        .skills .skills-content .right span {
+                            font-weight: 500;
+                            font-size: 18px;
+                            color: #14A76C;
+                        }
+                        
+                        .skills .skills-content .right .line {
+                            height: 2.5px;
+                            width: 20%;
+                            background: lightgrey;
+                            position: relative;
+                        }
+                        
+                        .services .serv-content .card {
+                            width: calc(50% - 10px);
+                            margin-bottom: 20px;
+                        }
+                        .skills .skills-content .column,
+                        .contact .contact-content .column {
+                            width: 100%;
+                            margin-bottom: 35px;
+                        }
+                        .website-counter {
+                            background-color:#272727;
+                            height: 25px;
+                            width: 50px;
+                            font-weight: 700;
+                            font-size: 25px;
+                            margin-top: 10px;
+                            color: #fff;
+                            padding-left:30px;
+                            margin-left: 720px;
+                            
+                          }
+                    }
+                    
+                    @media (max-width: 690px) {
+                        .max-width {
+                            padding: 0 23px;
+                        }
+                        .home .home-content .text-2 {
+                            font-size: 60px;
+                        }
+                        .home .home-content .text-3 {
+                            font-size: 32px;
+                        }
+                        .home .home-content a {
+                            font-size: 20px;
+                        }
+                        .services .serv-content .card {
+                            width: 70%;
+                        }
+                    }
+                    
+                    @media (max-width: 500px) {
+                        .home .home-content .text-2 {
+                            font-size: 50px;
+                        }
+                        .home .home-content .text-3 {
+                            font-size: 27px;
+                        }
+                        .about .about-content .right .text,
+                        .skills .skills-content .left .text {
+                            font-size: 19px;
+                        }
+                        .contact .right form .fields {
+                            flex-direction: column;
+                        }
+                        .contact .right form .name,
+                        .contact .right form .email {
+                            margin-bottom: 25px;
+                        }
+                        .right form .error-box {
+                            width: 150px;
+                        }
+                        .scroll-up-btn {
+                            right: 15px;
+                            bottom: 15px;
+                            height: 38px;
+                            width: 35px;
+                            font-size: 23px;
+                            line-height: 38px;
+                        }
+                        footer {
+                            background: #272727;
+                            padding: 15px 23px;
+                            color: #fff;
+                            text-align: center;
+                            font-size: 25px;
+                            font-family: 'Yanone Kaffeesatz', sans-serif;
+                            margin-bottom:0px;
+                        }
+                    }
+                   
+
+                    
